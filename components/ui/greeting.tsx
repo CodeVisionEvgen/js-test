@@ -11,11 +11,13 @@ function GreetingLg({ children }: { children: ReactNode }) {
         <div className="w-full max-w-xl max-md:max-w-lg ">
           <h1 className={title()}>Do you know javascript?</h1>
           <p className="text-default-400 font-bold w-full">
-            A regular express test of 20 questions with a choice of difficulty
+            A regular express test of 10 questions with a choice of difficulty
             level from beginner to professional
           </p>
         </div>
-        {children}
+        <div className="w-full flex flex-col-reverse gap-1 mt-2">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -29,7 +31,7 @@ function GreetingSm({ children }: { children: ReactNode }) {
         <h1 className={"text-4xl font-bold w-min"}>Do you know javascript?</h1>
       </div>
       <p className="text-default-400 font-bold text-left w-[300px]">
-        A regular express test of 20 questions with a choice of difficulty level
+        A regular express test of 10 questions with a choice of difficulty level
         from beginner to professional
       </p>
       <div className="w-full flex flex-col-reverse gap-1 mt-2">{children}</div>

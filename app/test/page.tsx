@@ -9,7 +9,7 @@ import { Difficulty } from "@/types";
 import { tests, TestType } from "@/config/tests";
 import ResultComponent from "@/components/tests/ResultComponent";
 import { BugIcon } from "@/components/icons";
-function getRandomTests(len = 20, currentTestList: TestType[]): TestType[] {
+function getRandomTests(len = 10, currentTestList: TestType[]): TestType[] {
   let arr: TestType[] = [];
   let usedIndices: Set<number> = new Set();
 
@@ -40,8 +40,9 @@ export default function Page() {
     if (!tests[diff as Difficulty]) {
       return router.replace("/");
     }
-    setTestList(getRandomTests(2, tests[diff as Difficulty]));
+    setTestList(getRandomTests(10, tests[diff as Difficulty]));
   }, []);
+  console.log(tests);
 
   return (
     <section className="flex flex-col items-start justify-start p-4 shadow rounded-md bg-white">
@@ -54,19 +55,25 @@ export default function Page() {
                 size="sm"
                 startContent={<BugIcon />}
                 variant="light"
+                onClick={() => {
+                  setTimeout(() => {
+                    window.open(
+                      `mailto:codevisionevgen@gmail.com?subject=[BUG%20REQUEST]%20${testList[step].id}`,
+                      "_blank",
+                    );
+                  }, 0);
+                }}
               />
             </span>
             <span className="w-full flex justify-between mb-2">
-              {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map(
-                (element, i) => {
-                  return (
-                    <div
-                      key={i}
-                      className={`bg-default-200 rounded-full w-[6px] h-[6px] max-md:w-1 max-md:h-1 ${i == step ? "bg-default-500" : ""} ${score[i] === 1 ? "bg-green-500" : score[i] === 0 ? "bg-red-500" : ""}`}
-                    />
-                  );
-                },
-              )}
+              {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((element, i) => {
+                return (
+                  <div
+                    key={i}
+                    className={`bg-default-200 rounded-full w-[6px] h-[6px] max-md:w-1 max-md:h-1 ${i == step ? "bg-default-500" : ""} ${score[i] === 1 ? "bg-green-500" : score[i] === 0 ? "bg-red-500" : ""}`}
+                  />
+                );
+              })}
             </span>
             <h1 className="text-lg font-bold">{step + 1} Question</h1>
             <p className=" text-default-500">{testList[step].title}</p>
@@ -99,7 +106,7 @@ export default function Page() {
         ) : testList.length ? (
           <ResultComponent score={score.reduce((a, c) => a + c)} />
         ) : (
-          "Loading"
+          "Loading..."
         )}
       </div>
     </section>
