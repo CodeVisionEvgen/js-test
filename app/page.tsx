@@ -1,6 +1,7 @@
 "use client";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { Button } from "@nextui-org/button";
+import { useRouter } from "next/navigation";
 
 import { useDifficultyContext } from "./contexts/difficultyContext";
 
@@ -8,11 +9,18 @@ import { ResponsiveGreeting } from "@/components/ui/greeting";
 import { Difficulty } from "@/types";
 export default function Home() {
   const { setDifficulty, difficulty } = useDifficultyContext();
+  const router = useRouter();
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <ResponsiveGreeting>
-        <Button className="font-bold text-white" color="primary">
+        <Button
+          className="font-bold text-white"
+          color="primary"
+          onClick={() => {
+            router.push(`/test?diff=${difficulty}`);
+          }}
+        >
           Start
         </Button>
         <Tabs
@@ -29,8 +37,8 @@ export default function Home() {
           onSelectionChange={(text: Difficulty) => setDifficulty(text)}
         >
           <Tab key="beginner" title="beginner" />
-          <Tab key="intermediate" title="intermediate" />
-          <Tab key="expert" title="expert" />
+          <Tab key="intermediate" isDisabled title="intermediate" />
+          <Tab key="expert" isDisabled title="expert" />
         </Tabs>
       </ResponsiveGreeting>
     </section>
