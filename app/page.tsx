@@ -16,7 +16,6 @@ export default function Home() {
       <ResponsiveGreeting>
         <Button
           className="font-bold text-white"
-          color="primary"
           onClick={() => {
             router.push(`/test?diff=${difficulty}`);
           }}

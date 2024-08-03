@@ -63,7 +63,7 @@ export const ResponsiveGreeting = ({ children }: { children: ReactNode }) => {
     return null;
   }
 
-  return windowSize.width >= 520 ? (
+  return windowSize.width >= 800 ? (
     <GreetingLg>{children}</GreetingLg>
   ) : (
     <GreetingSm>{children}</GreetingSm>

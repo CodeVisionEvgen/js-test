@@ -12,7 +12,7 @@ export const tests: Record<Difficulty, TestType[]> = {
     {
       id: "f2e1b8d5-a624-4eax-bffs-4d3d8e5f7c2q",
       title: "What will this function display on the screen?",
-      code: "\nfuntion run(a = 2) {\n  return a ? 1 : 0\n}\nrun(4)\n      ",
+      code: "\nfunсtion run(a = 2) {\n  return a ? 1 : 0\n}\nrun(4)\n      ",
       answers: ["4", "1", "2", "0"],
       correctIndex: 1,
     },

@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../../resume"
+		},
+		{
+			"path": "../../projects/qr-gen"
 		}
 	],
 	"settings": {
