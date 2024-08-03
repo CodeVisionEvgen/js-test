@@ -344,6 +344,36 @@ export const tests: Record<Difficulty, TestType[]> = {
       correctIndex: 2,
     },
     {
+      id: "d3f3c3e1-a7c8-42d6-bfd5-0c7a07f987e5",
+      title: "What is the output of the following code?",
+      code: `
+let x = 5;
+x += 3;
+console.log(x);
+    `,
+      answers: ["5", "3", "8", "undefined"],
+      correctIndex: 2,
+    },
+    {
+      id: "f3d2a1c4-b2b8-46f4-a5d8-5f2c7f3e2d1b",
+      title: "What is the output of the following code?",
+      code: `
+console.log(typeof null);
+    `,
+      answers: ["string", "null", "undefined", "object"],
+      correctIndex: 3,
+    },
+    {
+      id: "e3d2a1c4-b5d8-46f4-a7b2-2c1f5a6d3e4b",
+      title: "What is the output of the following code?",
+      code: `
+let obj = {a: 1, b: 2};
+console.log(obj['a']);
+    `,
+      answers: ["1", "2", "undefined", "null"],
+      correctIndex: 0,
+    },
+    {
       id: "ee7b6d8a-c5d4-4a2f-b7e9-8d3f4c5e6a7e",
       title: "What is the result of the function?",
       code:
@@ -370,6 +400,46 @@ export const tests: Record<Difficulty, TestType[]> = {
       correctIndex: 0,
     },
     {
+      id: "d4e5c3b6-a7f2-4d8b-9c5d-3f2a1b7e4c5a",
+      title: "What is the output of the following code?",
+      code: `
+let bool = true;
+console.log(typeof bool);
+    `,
+      answers: ["boolean", "string", "number", "object"],
+      correctIndex: 0,
+    },
+    {
+      id: "f4d6a7b8-e5c3-4d9e-b2d1-1f0a6b5c3d4e",
+      title: "What is the output of the following code?",
+      code: `
+let arr = ["apple", "banana", "cherry"];
+console.log(arr[1]);
+    `,
+      answers: ["banana", "apple", "cherry", "undefined"],
+      correctIndex: 0,
+    },
+    {
+      id: "e3f4a5b6-c7d8-4a9e-9b2d-1f5d6e7c3b4a",
+      title: "What is the output of the following code?",
+      code: `
+let isHappy = false;
+console.log(isHappy);
+    `,
+      answers: ["false", "true", "undefined", "null"],
+      correctIndex: 0,
+    },
+    {
+      id: "e3f4a5b6-c7d8-4a9e-9b2d-1f5d6e7c3b4a",
+      title: "What is the output of the following code?",
+      code: `
+let string = "4";
+console.log(+string);
+    `,
+      answers: ['"4"', "4", "number", "boolean"],
+      correctIndex: 1,
+    },
+    {
       id: "gg8b7e6a-c5d4-4a2f-b7e9-8c3f4d5a6b7e",
       title: "What is the result of the function?",
       code:
@@ -393,6 +463,59 @@ export const tests: Record<Difficulty, TestType[]> = {
         "everyExample([1, 2, 3]);\n" +
         "    ",
       answers: ["true", "null", "false", "undefined"],
+      correctIndex: 0,
+    },
+    {
+      id: "c4d5e6a7-b8d9-4c1e-9a2b-1f5a7e6d3b4a",
+      title: "What is the output of the following code?",
+      code: `
+let arr = [1, 2, 3];
+console.log(arr.pop());
+    `,
+      answers: ["3", "1", "2", "undefined"],
+      correctIndex: 0,
+    },
+    {
+      id: "a2b3c4d5-e6f7-4a9e-b8d9-2c1a5e4d6b7a",
+      title: "What is the output of the following code?",
+      code: `
+let str = "JavaScript";
+console.log(str.length);
+    `,
+      answers: ["10", "9", "11", "undefined"],
+      correctIndex: 0,
+    },
+    {
+      id: "d5e6a7b8-c9f2-4a1d-9b3c-1f4e5a7d6b2a",
+      title: "What is the output of the following code?",
+      code: `
+let obj = {a: 1, b: 2};
+delete obj.a;
+console.log(obj);
+    `,
+      answers: ["{b: 2}", "{a: 1, b: 2}", "{}", "undefined"],
+      correctIndex: 0,
+    },
+    {
+      id: "a1b2c3d4-e5f6-4a9e-b7d8-2c1f3e4d5b6a",
+      title: "What is the output of the following code?",
+      code: `
+let x = 7;
+let y = 3;
+console.log(x > y);
+    `,
+      answers: ["true", "false", "undefined", "null"],
+      correctIndex: 0,
+    },
+    {
+      id: "d3f3c3e1-a7c8-42d6-bfd5-0c7a07f987e5",
+      title: "What is the output of the following code?",
+      code: `
+let x = 5;
+x += 3;
+console.log(x);
+    `,
+      answers: ["8", "5", "3", "undefined"],
       correctIndex: 0,
     },
   ],
