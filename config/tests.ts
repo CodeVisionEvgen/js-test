@@ -148,7 +148,7 @@ export const tests: Record<Difficulty, TestType[]> = {
       id: "p4b7e6a9-c5d8-4a3f-b9c6-8d4f3e2a5b7c",
       title: "What is the output of the function?",
       code: "\nfunction random() {\n  return Math.random();\n}\nrandom();\n    ",
-      answers: ["0", "A random number between 0 and 1", "1", "Undefined"],
+      answers: ["0", "Random number", "1", "Undefined"],
       correctIndex: 1,
     },
     {
@@ -201,7 +201,7 @@ export const tests: Record<Difficulty, TestType[]> = {
         "toFixedExample(10.567);\n" +
         "    ",
       answers: ["10.56", "10.567", "10.5", "10.57"],
-      correctIndex: 3,
+      correctIndex: 0,
     },
     {
       id: "u6d8b7e9-a5c4-4a2f-b7e9-8c4d3f5b6a7e",
