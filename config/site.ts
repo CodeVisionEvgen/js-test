@@ -7,7 +7,7 @@ export const siteConfig = {
   description: "Express test for knowledge of javascript",
   contacts: [
     {
-      link: "https://portfolio-codevisionevgen.vercel.app",
+      link: "https://homeniuk.vercel.app",
       icon: UserShieldIcon,
     },
     {
