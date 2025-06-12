@@ -1,6 +1,6 @@
 "use client";
-import { Tab, Tabs } from "@nextui-org/tabs";
-import { Button } from "@nextui-org/button";
+import { Tab, Tabs } from "@heroui/tabs";
+import { Button } from "@heroui/button";
 import { useRouter } from "next/navigation";
 
 import { useDifficultyContext } from "./contexts/difficultyContext";

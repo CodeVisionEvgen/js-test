@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 import html2canvas from "html2canvas";
